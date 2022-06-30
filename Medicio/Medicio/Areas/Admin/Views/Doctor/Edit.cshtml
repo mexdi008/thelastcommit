@@ -1,0 +1,34 @@
+﻿@model Doctors
+@{
+    ViewData["Title"] = "Edit";
+}
+
+ <div class="col-md-6 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Default form</h4>
+              <p class="card-description">
+                Basic form layout
+              </p>
+              <form method="post" enctype="multipart/form-data" class="forms-sample">
+                <div class="form-group">
+                  <label for="exampleInputUsername1">Title</label>
+                  <input type="text" asp-for="@Model.Name" class="form-control" 
+   placeholder="Name of Doctor">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputUsername1">SubTitle</label>
+                  <input type="text" asp-for="@Model.Duty" class="form-control"  
+  placeholder="Duty of Doctor">
+                </div>
+                <div class="form-group">
+                  <label>Image</label>
+                  <input type="file" asp-for="@Model.Img" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+              </form>
+            </div>
+          </div>
+        </div>
+

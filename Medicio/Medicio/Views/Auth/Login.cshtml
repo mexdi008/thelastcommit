@@ -1,0 +1,56 @@
+﻿@using Medicio.ViewModels.Authorization
+@model LoginVM
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive Bootstrap 4 Admin &amp; Dashboard Template">
+    <meta name="author" content="Bdtask">
+    <title>1</title>
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="~/admin/dist/img/favicon.png">
+    <!--Global Styles(used by all pages)-->
+    <link href="~/admin/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/admin/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="~/admin/plugins/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="~/admin/plugins/typicons/src/typicons.min.css" rel="stylesheet">
+    <link href="~/admin/plugins/themify-icons/themify-icons.min.css" rel="stylesheet">
+    <!--Third party Styles(used by this page)-->
+    <!--Start Your Custom Style Now-->
+    <link href="~/admin/dist/css/style.css" rel="stylesheet">
+</head>
+<body class="bg-white">
+    <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h1 class="card-title">Login</h1>
+                  
+                  <form class="register-form" method="post">
+                    <div class="form-group">
+                      <label for="exampleInputUsername1">Username</label>
+                      <input type="text" asp-for="UserNameOrEmail" class="form-control" id="f_name" placeholder="Username Or Email">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="password" asp-for="Password" class="form-control" id="pass" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                            <label>Remember Me</label>
+                            <input type="checkbox" asp-for="RememberMe" />
+                        </div>
+                        <div asp-validation-summary="ModelOnly"></div>
+                    <button type="submit" class="btn btn-success btn-block">Sign in</button>
+                    <button class="btn btn-light">Cancel</button>
+
+                    <a class="nav-link" asp-controller="Auth" asp-action="Register">Register</a>
+                  </form>
+                </div>
+              </div>
+            </div>
+</body>
+
